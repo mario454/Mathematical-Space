@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+
+{% block head %}
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/calculator.css') }}">
+{% endblock %}
+
+{% block name %}
+
+    <body>
+        <div id="container" action = "calculator">
+            <div id="control">
+            </div>
+            <div id="operation"></div>
+            <div id="screen"></div>
+            <div id="buttons">
+                <div id="col_left">
+                    <button id="pi" onclick="add_element(Math.round(Math.PI * 100) / 100)"><sup>&#x213C;</sup></button>
+                    <button class="num" id="clear" onclick="clr()">C</button>
+                    <button class="num" id="seven" onclick="add_element(7)">7</button>
+                    <button class="num" id="four" onclick="add_element(4)">4</button>
+                    <button class="num" id="one" onclick="add_element(1)">1</button>
+                </div>
+                <div id="col_center">
+                    <button id="pow" onclick="pow()">^</button>
+                    <button class="num" id="del" onclick="del()">del</button>
+                    <button class="num" id="eight" onclick="add_element(8)">8</button>
+                    <button class="num" id="five" onclick="add_element(5)">5</button>
+                    <button class="num" id="two" onclick="add_element(2)">2</button>
+                </div>
+                <div id="col_right">
+                    <button id="percent" onclick="percent()">%</button>
+                    <button class="num" id="div" onclick="div()">/</button>
+                    <button class="num" id="nine" onclick="add_element(9)">9</button>
+                    <button class="num" id="six" onclick="add_element(6)">6</button>
+                    <button class="num" id="three" onclick="add_element(3)">3</button>
+                    <button class="num" id="dot" onclick="add_element('.')">.</button>
+                </div>
+                <div id="col_oper">
+                    <button id="root" onclick="root()">&#x221A;</button>
+                    <button class="num" id="mult" onclick="mult()">*</button>
+                    <button class="num" id="sub" onclick="sub()">-</button>
+                    <button class="num" id="plus" onclick="plus()">+</button>
+                    <button class="num" id="equal" onclick="equal()">=</button>
+
+                </div>
+                <div id="bottom">
+                    <button class="num" id="zero" onclick="add_element(0)">0</button>
+                </div>
+            </div>
+            <script>
+
+                oper = "";
+                operation = "";
+                value = 0;
+                final_result = 0.0;
+
+                function add_element(x) {
+                    if (oper == "") {
+                        clr();
+                    }
+                    document.getElementById("screen").innerHTML += x;
+                    oper += x;
+                    operation += x;
+                    document.getElementById("operation").innerHTML = oper;
+                    value = parseInt(document.getElementById("screen").innerHTML);
+
+                }
+
+                function clr() {
+                    oper = "";
+                    operation = "";
+                    document.getElementById("operation").innerHTML = "";
+                    document.getElementById("screen").innerHTML = "";
+                }
+
+                function del() {
+                    value = Math.floor(value / 10);
+                    oper = oper.slice(0, oper.length - 1);
+                    operation = operation.slice(0, operation.length - 2);
+                    document.getElementById("screen").innerHTML = value;
+                    document.getElementById("operation").innerHTML = oper;
+
+                }
+
+                function plus() {
+                    oper += " + ";
+                    operation += " + ";
+                    document.getElementById("screen").innerHTML = "";
+                    document.getElementById("operation").innerHTML = oper;
+                }
+                function sub() {
+                    oper += " - ";
+                    operation += " - ";
+                    document.getElementById("screen").innerHTML = "";
+                    document.getElementById("operation").innerHTML = oper;
+                }
+                function mult() {
+                    oper += " * ";
+                    operation += " * ";
+                    document.getElementById("screen").innerHTML = "";
+                    document.getElementById("operation").innerHTML = oper;
+                }
+                function div() {
+                    oper += " / ";
+                    operation += " / ";
+                    document.getElementById("screen").innerHTML = "";
+                    document.getElementById("operation").innerHTML = oper;
+                }
+
+                function pow() {
+                    oper += " ** ";
+                    operation += " ** ";
+                    document.getElementById("screen").innerHTML = "";
+                    document.getElementById("operation").innerHTML = oper;
+                }
+                function dot() {
+                    oper += ".";
+                    operation += ".";
+                    document.getElementById("screen").innerHTML = "";
+                    document.getElementById("operation").innerHTML = oper;
+                }
+                function percent() {
+                    oper += " % ";
+                    operation += " / 100";
+                    document.getElementById("screen").innerHTML = "";
+                    document.getElementById("operation").innerHTML = oper;
+                }
+
+                function root() {
+                    oper += "** 0.5";
+                    operation += " ** 0.5";
+                    document.getElementById("screen").innerHTML = "";
+                    document.getElementById("operation").innerHTML = oper;
+                }
+
+                function equal() {
+                    document.getElementById("operation").innerHTML = "";
+                    document.getElementById("screen").innerHTML = eval(operation);
+                    oper = eval(operation);
+                    operation = eval(operation);
+
+                }
+
+                document.getElementById("operation").innerHTML = final_result;
+            </script>
+    </body>
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block name%}
+    <body style = "background:aqua;">
+        <center>
+            <br>
+            <p style = "font-size:40px; font-weight: bold;"><i>Hello in Mathematical Space</i></p>
+        <form action = "/main_page" method = "post">
+            <button name ="convert_units" type = "submit" id = "convert_units" style = "background-color: transparent"><a href = "/convert_units" id = "convert_units" style = "box-shadow: 1px 1px 10px black;">Convert units</a></button>
+            <button name ="calculator" type = "submit" style = "background-color: transparent" id = "calculator"><a href = "/calculator" id = "calculator" style = "box-shadow: 1px 1px 10px black;">Calculator</a></button>
+        </form>
+        </center>
+    </body>
+{% endblock %}

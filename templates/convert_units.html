@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <title>Convert Units</title>
+{% endblock %}
+
+{% block name %}
+    <body>
+            <h1 style = "font-weight: bold; margin-left: 570px" ><i>Convert Units</i></h1>
+            <br><br>
+        <form action = "convert_units" method = "post">
+                <div>
+                    <button name = "length" type = "submit" style = "background-color: transparent" id = "length"><a href = "/length" id = "length-aa">Length</a></button>
+                    <button name = "weight" type = "submit" style = "background-color: transparent" id = "weight"><a href = "/weight" id = "weight-aa">Weight</a></button>
+                </div>
+                <br><br>
+                <div>
+                    <button name = "time" type = "submit" style = "background-color: transparent" id = "time"><a href = "/time" id = "time-aa">Time</a></button>
+                    <button name = "temp" type = "submit" style = "background-color: transparent" id = "temp"><a href = "/temp" id = "temp-aa">Tempreture</a></button>
+                </div>
+                <br><br>
+                <div>
+                    <button name = "area" type = "submit" style = "background-color: transparent" id = "area"><a href = "/area" id = "area-aa">Area</a></button>
+                    <button name="volume" type="submit" style = "background-color: transparent" id = "volume"><a href = "/volume" id = "volume-aa">Volume</a></button>
+                </div>
+                <br><br>
+                <div>
+                    <button name = "velocity" type = "submit" style = "background-color: transparent" id = "velocity"><a href = "/velocity" id = "velocity-aa">Velocity</a></button>
+                    <button name = "acceleration" type = "submit" style = "background-color: transparent" id = "acceleration"><a href = "/acceleration" id = "acceleration-aa">Acceleration</a></button>
+                </div>
+                <br><br>
+                <div>
+                    <button name = "force" type = "submit" style = "background-color: transparent" id = "force"><a href = "/force" id = "force-aa">Force</a></button>
+                    <button name = "work" type = "submit" style = "background-color: transparent" id = "work"><a href = "/work" id = "work-aa">Work</a></button>
+                </div>
+        </form>
+    </body>
+{% endblock %}

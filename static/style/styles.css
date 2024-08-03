@@ -1,0 +1,194 @@
+.center {
+    text-align: center
+}
+
+.font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+
+.input {
+    width: 140px;
+    height: 30px;
+}
+
+.button {
+    font-size: 20px;
+}
+
+.select {
+    width: 140px;
+    height: 30px;
+}
+
+#convert_units,
+#calculator {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    margin: 40px;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    display: block;
+}
+
+#convert_units:hover,
+#calculator:hover {
+    background-color: white;
+    color: black;
+}
+
+#length,
+#length-aa,
+#weight,
+#weight-aa,
+#time,
+#time-aa,
+#temp,
+#temp-aa,
+#area,
+#area-aa,
+#volume,
+#volume-aa,
+#velocity,
+#velocity-aa,
+#acceleration,
+#acceleration-aa,
+#force,
+#force-aa,
+#work,
+#work-aa {
+    background-color: #CD6155;
+    font-size: 30px;
+    font-weight: 400;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    padding: 5px;
+    margin-left: 190px;
+    transition: all 0.1s;
+}
+
+
+#length-aa {
+    margin-left: 175px;
+}
+
+#weight,
+#weight-aa {
+    background-color: #5D6D7E;
+    margin-left: 195px;
+}
+
+#time,
+#time-aa {
+    background-color: #3498DB;
+    margin-left: 190px;
+}
+
+#temp,
+#temp-aa {
+    background-color: #F4D03F;
+    margin-left: 190px;
+}
+
+#area,
+#area-aa {
+    background-color: #BFC9CA;
+    margin-left: 190px;
+}
+
+#acceleration,
+#acceleration-aa {
+    background-color: #BEDC74;
+    margin-left: 175px;
+}
+
+#volume,
+#volume-aa {
+    background-color: #7F8C8D;
+    margin-left: 210px;
+}
+
+#velocity,
+#velocity-aa {
+    background-color: #EDBB99;
+    margin-left: 180px;
+}
+
+#force,
+#force-aa {
+    background-color: #A569BD;
+    margin-left: 190px;
+}
+
+#work,
+#work-aa {
+    background-color: #FADBD8;
+    margin-left: 210px;
+}
+
+#length-aa:hover,
+#weight-aa:hover,
+#time-aa:hover,
+#temp-aa:hover,
+#area-aa:hover,
+#acceleration-aa:hover,
+#volume-aa:hover,
+#velocity-aa:hover,
+#work-aa:hover,
+#force-aa:hover {
+    font-size: 35px;
+    box-shadow: 1px 1px 10px black;
+}
+
+#convert {
+    margin-right: 65px;
+    margin-left: -10px;
+    border: none;
+    font-size: 20px;
+    transition: all 0.1s;
+    text-align: center;
+}
+
+#convert:hover {
+    box-shadow: 1px 1px 10px black;
+}
+
+#from,
+#from-ss {
+    border: none;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    margin-right: 90px;
+}
+
+#from-ss {
+    margin-right: 0px;
+}
+
+#to,
+#to-ss {
+    border: none;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    margin-left: 10px
+}
+
+#to-ss {
+    margin-left: 240px
+}
+
+#result{
+    background-color: transparent;
+    box-shadow: 1px 1px 10px black;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+}
